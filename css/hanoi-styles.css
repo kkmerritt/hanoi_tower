@@ -1,0 +1,180 @@
+/* - Hanoi Tower Style Sheet - */
+
+* {
+  font-family: 'Rock Salt', cursive;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border-style: none;
+  background-color: white;
+}
+body {
+  position: relative;
+  border-style: ridge;
+  width: 950px;
+  height: 775px;
+  z-index: 0;
+}
+div {
+}
+
+#play {
+  border-width: thin;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: 2px 2px black;
+  margin-top: 0px;
+  width: 880px;
+  color: black;
+  background: none;
+  position: absolute;
+  font-size: 2em;
+}
+#play:hover {
+  color: red;
+}
+
+#play:active {
+  color: green;
+}
+/*COlUMN CSS.*/
+.col1, .col2, .col3 {
+  z-index: -1;
+  background-color: none;
+  display: inline-block;
+  position: absolute;
+  width: 280px;
+  height: 500px;
+}
+
+.col1 {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.col2 {
+  margin-top: 25px;
+  margin-left: 325px;
+}
+
+.col3 {
+  margin-top: 25px;
+  margin-left: 625px;
+}
+/* END COlUMN CSS.*/
+
+/*Base and Pill CSS*/
+.base {
+  z-index: 0;
+  position: absolute;
+  background: brown;
+  width: 280px;
+  height: 40px;
+  margin-top: 460px;
+}
+
+.pillar1, .pillar2, .pillar3 {
+  position: absolute;
+  background: url('pole.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  width: 30px;
+  height: 350px;
+  margin-left: 125px;
+  margin-top: 110px;
+}
+/*END -- Base and Pill CSS*/
+
+/*Interactive CSS Elements - Disc & Nav*/
+
+.disc, .colPos1, .colPos2, .colPos3 {
+
+  cursor: crosshair;
+  position: absolute;
+  z-index: 2;
+  width: 280px;
+  height: 30px;
+  background: black;
+}
+.disc{
+  background: url('stones.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+p {
+  margin-top: 30px;
+  background: none;
+  position: relative;
+  text-align: center;
+  vertical-align:middle;
+  font-size: 3em;
+}
+
+.draggable {
+  opacity: .5;
+}
+
+#nav {
+  position: absolute;
+  background: url('wood.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: visible;
+  width: 880px;
+  height: 170px;
+  margin-left: 25px;
+  margin-top: 480px;
+}
+
+a {
+  background: red;
+}
+
+/*MODAL STUFF*/
+.modal {
+  background: red;
+  position: fixed;
+  z-index: 2;
+
+  left: 270px;
+  width: 400px;
+
+
+  top: -440px;
+
+  border: 1px solid black;
+  padding: 1.2em;
+
+  text-align: center;
+}
+
+.modal.active {
+  display: block;
+}
+
+///
+
+#win1 {
+  background: black;
+  position: fixed;
+  z-index: 2;
+
+  left: -2000px;
+  width: 400px;
+
+
+  top: 250px;
+
+  border: 1px solid black;
+  padding: 1.2em;
+
+  text-align: center;
+}
+
+.modal.active {
+  display: block;
+}
